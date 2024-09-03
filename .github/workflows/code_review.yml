@@ -1,23 +1,24 @@
-name: Code Review
+name: Code Quality Check
 
-on: [pull_request]
+on: [push, pull_request]
 
 jobs:
-  review:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Run ChatGPT Code Review
-      uses: unsafecoerce/chatgpt-action@main
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        CHATGPT_ACCESS_TOKEN: ${{ secrets.CHATGPT_ACCESS_TOKEN }}
-        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+    - name: Set up Python
+      uses: actions/setup-python@v2
       with:
-        debug: false
-        action: review
-        prompt: |
-          Please review the function names in this pull request and provide feedback on whether they are meaningful and follow best practices.
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8
+
+    - name: Run flake8
+      run: flake8 .
