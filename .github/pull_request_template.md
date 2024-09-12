@@ -2,7 +2,31 @@
 Please include a summary of the changes and the related issue. 
 
 ## Checklist
-- [ ] My code follows the style guidelines of this project.
+- [ ]  are my functions and their arguments passed separately as JSON file and python script as follows:
+JSON
+{
+    "tests": [
+        {
+            "function_name": "fetch_data",
+            "url": "https://ckan0.cf.opendata.inter.prod-toronto.ca/api/3/action/package_show?id=toronto-signature-sites"
+        },
+        {
+            "function_name": "process_data",
+            "data": {"key": "value"}
+        }
+    ]
+}
+
+
+PYTHON
+
+import json
+import requests
+
+def fetch_data(url):
+    return requests.get(url).json()
+
+
 - [ ] I have performed a self-review of my code.
 - [ ] I have commented my code, particularly in hard-to-understand areas.
 - [ ] I have made corresponding changes to the documentation.
