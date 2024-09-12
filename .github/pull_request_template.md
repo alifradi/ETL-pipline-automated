@@ -3,8 +3,11 @@ Please include a summary of the changes and the related issue.
 
 ## Checklist
 - [ ]  are my functions and their arguments passed separately as JSON file and python script as follows:
+      
 JSON
+
 {
+
     "tests": [
         {
             "function_name": "fetch_data",
@@ -15,6 +18,7 @@ JSON
             "data": {"key": "value"}
         }
     ]
+
 }
 
 
