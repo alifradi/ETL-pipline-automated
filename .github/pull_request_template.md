@@ -7,7 +7,6 @@ Please include a summary of the changes and the related issue.
 JSON
 
 {
-
     "tests": [
         {
             "function_name": "fetch_data",
@@ -18,7 +17,6 @@ JSON
             "data": {"key": "value"}
         }
     ]
-
 }
 
 
