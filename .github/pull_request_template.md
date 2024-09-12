@@ -11,15 +11,14 @@ JSON
     "tests": [
         {
             "function_name": "fetch_data",
-            "url": "https://ckan0.cf.opendata.inter.prod-toronto.ca/api/3/action/package_show?id=toronto-signature-sites"
-        },
-        {
-            "function_name": "process_data",
-            "data": {"key": "value"}
+            "module_name": "data_fetcher",
+            "args": {
+                "url": "https://ckan0.cf.opendata.inter.prod-toronto.ca/api/3/action/package_show?id=toronto-signature-sites"
+            }
         }
     ]
-
 }
+
 
 
 PYTHON
