@@ -4,7 +4,7 @@
 
 | Content | Refresh Rate | Columns | Link |
 |---------|---------------|---------|------|
-| Population / Crime | Monthly | ASSAULT, AUTOTHEFT, BIKETHEFT, BREAKENTER, HOMICIDE, ROBBERY, SHOOTING, THEFTFROMMV, THEFTOVER, Years: 2014-2023 | https://open.toronto.ca/dataset/neighbourhood-crime-rates/ |
+| Population / Crime | Annually | ASSAULT, AUTOTHEFT, BIKETHEFT, BREAKENTER, HOMICIDE, ROBBERY, SHOOTING, THEFTFROMMV, THEFTOVER, Years: 2014-2023 | https://open.toronto.ca/dataset/neighbourhood-crime-rates/ |
 | Housing Affordability | Quarterly | Quarter, Subsidized Housing Units, Affordable Housing Units | https://open.toronto.ca/dataset/active-affordable-and-social-housing-units/ |
 | Places of Interest and Toronto Attractions | As available | ADDRESS_INFO, NAME, CATEGORY, GEOID, ADDRESS_FULL, POSTAL_CODE, MUNICIPALITY, CITY, WARD, WARD_2003, WARD_2018, geometry | https://open.toronto.ca/dataset/places-of-interest-and-toronto-attractions/ |
 | Amenities | Monthly | LOCATIONID, ASSET_ID, ASSET_NAME, TYPE, AMENITIES, ADDRESS, geometry | https://open.toronto.ca/dataset/parks-and-recreation-facilities/ |
