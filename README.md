@@ -1,128 +1,149 @@
 # ETL-pipline-automated
 
 ## Dataset
-Population_Crime:
-  Refresh_rate: Monthly
-  Columns:
-    - ASSAULT
-    - AUTOTHEFT
-    - BIKETHEFT
-    - BREAKENTER
-    - HOMICIDE
-    - ROBBERY
-    - SHOOTING
-    - THEFTFROMMV
-    - THEFTOVER
-    - Years: ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023']
+## Population / Crime
+- **Refresh rate**: Monthly
+- **Columns**:
+  - ASSAULT
+  - AUTOTHEFT
+  - BIKETHEFT
+  - BREAKENTER
+  - HOMICIDE
+  - ROBBERY
+  - SHOOTING
+  - THEFTFROMMV
+  - THEFTOVER
+  - **Years**:
+    - 2014
+    - 2015
+    - 2016
+    - 2017
+    - 2018
+    - 2019
+    - 2020
+    - 2021
+    - 2022
+    - 2023
+- **Link**: Population / Crime
 
-Housing_Affordability:
-  Refresh_rate: Quarterly
-  Columns:
-    - Quarter
-    - Subsidized Housing Units
-    - Affordable Housing Units
+## Housing Affordability
+- **Refresh rate**: Quarterly
+- **Columns**:
+  - Quarter
+  - Subsidized Housing Units
+  - Affordable Housing Units
+- **Link**: Housing Affordability
 
-Places_of_Interest_and_Toronto_Attractions:
-  Refresh_rate: As available
-  Columns:
-    - ADDRESS_INFO
-    - NAME
-    - CATEGORY
-    - GEOID
-    - ADDRESS_FULL
-    - POSTAL_CODE
-    - MUNICIPALITY
-    - CITY
-    - WARD
-    - WARD_2003
-    - WARD_2018
-    - geometry
+## Places of Interest and Toronto Attractions
+- **Refresh rate**: As available
+- **Columns**:
+  - ADDRESS_INFO
+  - NAME
+  - CATEGORY
+  - GEOID
+  - ADDRESS_FULL
+  - POSTAL_CODE
+  - MUNICIPALITY
+  - CITY
+  - WARD
+  - WARD_2003
+  - WARD_2018
+  - geometry
+- **Link**: Places of Interest and Toronto Attractions
 
-Amenities:
-  Refresh_rate: Monthly
-  Columns:
-    - LOCATIONID
-    - ASSET_ID
-    - ASSET_NAME
-    - TYPE
-    - AMENITIES
-    - ADDRESS
-    - geometry
+## Amenities
+- **Refresh rate**: Monthly
+- **Columns**:
+  - LOCATIONID
+  - ASSET_ID
+  - ASSET_NAME
+  - TYPE
+  - AMENITIES
+  - ADDRESS
+  - geometry
+- **Link**: Amenities
 
-Large_Industrial_Commercial_Properties:
-  Refresh_rate: Monthly
-  Columns:
-    - site_name
-    - district
-    - closest_major_intersection
-    - status
-    - property_type_primary
-    - total_site_area_acres
-    - sq_ft_available
-    - asking_price
-    - planning_status
-    - planning_status_zoning
-    - planning_status_city_ward
-    - geometry
+## Large Industrial & Commercial Properties
+- **Refresh rate**: Monthly
+- **Columns**:
+  - site_name
+  - district
+  - closest_major_intersection
+  - status
+  - property_type_primary
+  - total_site_area_acres
+  - sq_ft_available
+  - asking_price
+  - planning_status
+  - planning_status_zoning
+  - planning_status_city_ward
+  - geometry
+- **Link**: Large Industrial & Commercial Properties
 
-Census_of_Population:
-  Refresh_rate: Every 5 years
-  Columns:
-    - Category
-    - Topic
-    - Characteristic
-    - City of Toronto
-    - Neighborhoods
+## Census of Population
+- **Refresh rate**: Every 5 years
+- **Columns**:
+  - Category
+  - Topic
+  - Characteristic
+  - City of Toronto
+  - Neighborhoods
+- **Link**: Census of Population
 
-EarlyON_Child_and_Family_Centres:
-  Refresh_rate: Daily
-  Columns:
-    - loc_id
-    - program_name
-    - languages
-    - address
-    - major_intersection
-    - ward
-    - lat
-    - lng
-    - geometry
+## EarlyON Child and Family Centres
+- **Refresh rate**: Daily
+- **Columns**:
+  - loc_id
+  - program_name
+  - languages
+  - address
+  - major_intersection
+  - ward
+  - lat
+  - lng
+  - geometry
+- **Link**: EarlyON Child and Family Centres
 
-Air_Conditioned_and_Cool_Spaces:
-  Refresh_rate: Daily
-  Columns:
-    - locationId
-    - locationTypeCode
-    - locationTypeDesc
-    - locationName
-    - address
-    - geometry
+## Air Conditioned and Cool Spaces
+- **Refresh rate**: Daily
+- **Columns**:
+  - locationId
+  - locationTypeCode
+  - locationTypeDesc
+  - locationName
+  - address
+  - geometry
+- **Link**: Air Conditioned and Cool Spaces
 
-Outbreaks_in_Toronto_Healthcare_Institutions:
-  Refresh_rate: Weekly
-  Columns:
-    - Institution Name
-    - Institution Address
-    - Outbreak Setting
-    - Type of Outbreak
-    - Date Outbreak Began
-    - Date Declared Over
-    - Active
+## Outbreaks in Toronto Healthcare Institutions
+- **Refresh rate**: Weekly
+- **Columns**:
+  - Institution Name
+  - Institution Address
+  - Outbreak Setting
+  - Type of Outbreak
+  - Date Outbreak Began
+  - Date Declared Over
+  - Active
+- **Link**: Outbreaks in Toronto Healthcare Institutions
 
-Marriage_Licence_Statistics:
-  Refresh_rate: Monthly
-  Columns:
-    - CIVIC_CENTRE
-    - MARRIAGE_LICENSES
-    - TIME_PERIOD
+## Marriage Licence Statistics
+- **Refresh rate**: Monthly
+- **Columns**:
+  - CIVIC_CENTRE
+  - MARRIAGE_LICENSES
+  - TIME_PERIOD
+- **Link**: Marriage Licence Statistics
 
-Tennis_Courts_Facilities:
-  Refresh_rate: As available
-  Columns:
-    - ID
-    - Name
-    - Type
-    - Lights
-    - Courts
-    - LocationAddress
-    - WinterPlay
-    - geometry
+## Tennis Courts Facilities
+- **Refresh rate**: As available
+- **Columns**:
+  - ID
+  - Name
+  - Type
+  - Lights
+  - Courts
+  - LocationAddress
+  - WinterPlay
+  - geometry
+- **Link**: Tennis Courts Facilities
