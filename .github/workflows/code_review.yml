@@ -1,4 +1,4 @@
-name: Code Quality Check
+name: PEP8 rules
 
 on: [push, pull_request]
 
