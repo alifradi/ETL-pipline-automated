@@ -1,6 +1,6 @@
 [
     {
-        "module_name": "etl.extract",
+        "module_name": "extract",
         "function_name": "get_data",
         "type": "extract",
         "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "tennis-courts-facilities"]
