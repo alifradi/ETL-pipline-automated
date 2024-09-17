@@ -1,39 +1,38 @@
-import json
-import importlib
-import sys
-import os
+
+import requests
 import pandas as pd
+import io
 
-# Add the directory containing the modules to the Python path
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'etl'))
 
-# Load the functions data from the JSON file located in the etl directory
-json_file_path = os.path.join(os.path.dirname(__file__), '..', 'etl',
-'functions_data.json')
-with open(json_file_path, 'r') as f:
-    functions_data = json.load(f)
+def get_data(base_url, package_id):
+    url = base_url + "/api/3/action/package_show"
+    params = {"id": package_id}
+    package = requests.get(url, params=params).json()
 
-for function_data in functions_data:
-    if function_data['type'] == 'extract':
-        module_name = function_data['module_name']
-        function_name = function_data['function_name']
-        arguments = function_data['arguments']
+    # Initialize an empty list to store data
+    data_list = []
 
-        try:
-            # Dynamically import the module and get the function
-            module = importlib.import_module(module_name)
-            function = getattr(module, function_name)
+    # To get resource data:
+    for idx, resource in enumerate(package["result"]["resources"]):
 
-            # Call the function with the provided arguments
-            result = function(*arguments)
+        # for datastore_active resources:
+        if resource["datastore_active"]:
 
-            # Check if the result is a dataframe
-            if isinstance(result, pd.DataFrame):
-                print(f"The output of {function_name} is a dataframe.")
-            else:
-                print(f"The output of {function_name} is not a dataframe.")
+            # To get all records in CSV format:
+            url = base_url + "/datastore/dump/" + resource["id"]
+            resource_dump_data = requests.get(url).text
+            try:
+                data_list.append(pd.read_csv(io.StringIO(
+                    resource_dump_data), on_bad_lines='skip'))
+            except pd.errors.ParserError as e:
+                print(f"Error parsing {resource['id']}: {e}")
 
-        except (ImportError, AttributeError) as e:
-            print(f"Error importing {function_name} from {module_name}: {e}")
-        except Exception as e:
-            print(f"Error calling {function_name}: {e}")
+    if data_list:
+        df = pd.concat(data_list, ignore_index=True)
+    else:
+        df = pd.DataFrame()  # Create an empty dataframe if no data
+
+    # Print the head of the dataframe
+    print(df.head())
+
+    return df

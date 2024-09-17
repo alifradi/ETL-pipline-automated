@@ -1,4 +1,3 @@
-
 import json
 import importlib
 import sys
@@ -6,11 +5,12 @@ import os
 import pandas as pd
 
 # Add the directory containing the modules to the Python path
-sys.path.append(os.path.join(os.path.dirname(
-    __file__), 'path_to_modules_directory'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'etl'))
 
-# Load the functions data from the JSON file
-with open('functions_data.json', 'r') as f:
+# Load the functions data from the JSON file located in the etl directory
+json_file_path = os.path.join(os.path.dirname(__file__), '..', 'etl',
+'functions_data.json')
+with open(json_file_path, 'r') as f:
     functions_data = json.load(f)
 
 for function_data in functions_data:
