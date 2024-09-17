@@ -4,7 +4,6 @@ import io
 
 
 def get_data(base_url, package_id):
-    # To retrieve the metadata for this package and its resources, use the package name in this page's URL:
     url = base_url + "/api/3/action/package_show"
     params = {"id": package_id}
     package = requests.get(url, params=params).json()
@@ -31,7 +30,6 @@ def get_data(base_url, package_id):
             except pd.errors.ParserError as e:
                 print(f"Error parsing {resource['id']}: {e}")
 
-    # Combine all dataframes in data_list into a single dataframe if data_list is not empty
     if data_list:
         df = pd.concat(data_list, ignore_index=True)
     else:
