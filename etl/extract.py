@@ -33,6 +33,6 @@ def get_data(base_url, package_id):
         df = pd.DataFrame()  # Create an empty dataframe if no data
 
     # Print the head of the dataframe
-    print(df.head())
+    print(df.info())
 
     return df
