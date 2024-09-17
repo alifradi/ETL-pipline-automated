@@ -3,7 +3,7 @@
     "path": "D:/Data engineer track/ETL-pipline-automated/functions_data.json",
     "project_path": "functions_data.json",
     "type": "json",
-    "hash": "3138445991",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1726545181062.0,
@@ -13,7 +13,7 @@
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "3,34",
+        "cursorPosition": "7,1",
         "scrollLine": "0"
     },
     "folds": "",
