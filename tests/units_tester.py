@@ -33,6 +33,8 @@ for function_data in functions_data:
                 print(f"The output of {function_name} is a dataframe called {dataframe_name}.")
             else:
                 print(f"{function_name} is rendering {dataframe_name} which has not a dataframe type.")
+                if result.shape[0] == 0:
+                  print(f"{dataframe_name} is empty.")
 
         except (ImportError, AttributeError) as e:
             print(f"Error importing {function_name} from {module_name}: {e}")
