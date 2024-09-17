@@ -22,4 +22,4 @@ jobs:
 
     - name: Run test script
       run: |
-        python tests/test_functions.py
+        python tests/units_tester.py
