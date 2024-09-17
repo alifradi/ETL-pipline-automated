@@ -10,5 +10,59 @@
         "function_name": "get_data",
         "type": "extract",
         "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "marriage-licence-statistics"]
+    },
+     {
+        "module_name": "extract",
+        "function_name": "get_data",
+        "type": "extract",
+        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "outbreaks-in-toronto-healthcare-institutions"]
+    },
+     {
+        "module_name": "extract",
+        "function_name": "get_data",
+        "type": "extract",
+        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "air-conditioned-and-cool-spaces-heat-relief-network"]
+    },
+     {
+        "module_name": "extract",
+        "function_name": "get_data",
+        "type": "extract",
+        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "earlyon-child-and-family-centres"]
+    },
+     {
+        "module_name": "extract",
+        "function_name": "get_data",
+        "type": "extract",
+        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "neighbourhood-profiles"]
+    },
+     {
+        "module_name": "extract",
+        "function_name": "get_data",
+        "type": "extract",
+        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "toronto-signature-sites"]
+    },
+     {
+        "module_name": "extract",
+        "function_name": "get_data",
+        "type": "extract",
+        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "parks-and-recreation-facilities"]
+    },
+     {
+        "module_name": "extract",
+        "function_name": "get_data",
+        "type": "extract",
+        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "places-of-interest-and-toronto-attractions"]
+    },
+     {
+        "module_name": "extract",
+        "function_name": "get_data",
+        "type": "extract",
+        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "active-affordable-and-social-housing-units"]
+    },
+     {
+        "module_name": "extract",
+        "function_name": "get_data",
+        "type": "extract",
+        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "neighbourhood-crime-rates"]
     }
 ]
