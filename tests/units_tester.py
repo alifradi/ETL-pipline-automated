@@ -18,6 +18,7 @@ for function_data in functions_data:
         module_name = function_data['module_name']
         function_name = function_data['function_name']
         arguments = function_data['arguments']
+        dataframe_name = function_data['table_name']
 
         try:
             # Dynamically import the module and get the function
@@ -29,9 +30,9 @@ for function_data in functions_data:
 
             # Check if the result is a dataframe
             if isinstance(result, pd.DataFrame):
-                print(f"The output of {function_name} is a dataframe.")
+                print(f"The output of {function_name} is a dataframe called {dataframe_name}.")
             else:
-                print(f"The output of {function_name} is not a dataframe.")
+                print(f"{function_name} is rendering {dataframe_name} which has not a dataframe type.")
 
         except (ImportError, AttributeError) as e:
             print(f"Error importing {function_name} from {module_name}: {e}")
