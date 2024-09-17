@@ -18,7 +18,7 @@ def get_data(base_url, package_id):
         # for datastore_active resources:
         if resource["datastore_active"]:
 
-            # To get all records in CSV format:
+            # To get all records in CSV format :
             url = base_url + "/datastore/dump/" + resource["id"]
             resource_dump_data = requests.get(url).text
             try:
