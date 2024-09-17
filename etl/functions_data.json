@@ -3,12 +3,77 @@
         "module_name": "extract",
         "function_name": "get_data",
         "type": "extract",
-        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "tennis-courts-facilities"]
+        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "tennis-courts-facilities"],
+        "table_name": "marriage_licence_statistics"
     },
      {
         "module_name": "extract",
         "function_name": "get_data",
         "type": "extract",
-        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "marriage-licence-statistics"]
+        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "marriage-licence-statistics"],
+        "table_name": "marriage_licence_statistics"
+    },
+     {
+        "module_name": "extract",
+        "function_name": "get_data",
+        "type": "extract",
+        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "outbreaks-in-toronto-healthcare-institutions"],
+        "table_name": "outbreaks_in_toronto_healthcare_institutions"
+    },
+     {
+        "module_name": "extract",
+        "function_name": "get_data",
+        "type": "extract",
+        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "air-conditioned-and-cool-spaces-heat-relief-network"],
+        "table_name": "air_conditioned_and_cool_spaces_heat_relief_network"
+    },
+     {
+        "module_name": "extract",
+        "function_name": "get_data",
+        "type": "extract",
+        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "earlyon-child-and-family-centres"],
+        "table_name": "earlyon_child_and_family_centres"
+    },
+     {
+        "module_name": "extract",
+        "function_name": "get_data",
+        "type": "extract",
+        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "neighbourhood-profiles"],
+        "table_name": "neighbourhood_profiles"
+    },
+     {
+        "module_name": "extract",
+        "function_name": "get_data",
+        "type": "extract",
+        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "toronto-signature-sites"],
+        "table_name": "toronto_signature_sites"
+    },
+     {
+        "module_name": "extract",
+        "function_name": "get_data",
+        "type": "extract",
+        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "parks-and-recreation-facilities"],
+        "table_name": "parks_and_recreation_facilities"
+    },
+     {
+        "module_name": "extract",
+        "function_name": "get_data",
+        "type": "extract",
+        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "places-of-interest-and-toronto-attractions"],
+        "table_name": "places_of_interest_and_toronto_attractions"
+    },
+     {
+        "module_name": "extract",
+        "function_name": "get_data",
+        "type": "extract",
+        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "active-affordable-and-social-housing-units"],
+        "table_name": "active_affordable_and_social_housing_units"
+    },
+     {
+        "module_name": "extract",
+        "function_name": "get_data",
+        "type": "extract",
+        "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "neighbourhood-crime-rates"],
+        "table_name": "neighbourhood_crime_rates"
     }
 ]
