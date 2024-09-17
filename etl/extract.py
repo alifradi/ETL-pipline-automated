@@ -3,10 +3,11 @@ import requests
 import pandas as pd
 import io
 
+
 def get_data(base_url, package_id):
     # To retrieve the metadata for this package and its resources, use the package name in this page's URL:
     url = base_url + "/api/3/action/package_show"
-    params = { "id": package_id }
+    params = {"id": package_id}
     package = requests.get(url, params=params).json()
 
     # Initialize an empty list to store data
@@ -22,7 +23,8 @@ def get_data(base_url, package_id):
             url = base_url + "/datastore/dump/" + resource["id"]
             resource_dump_data = requests.get(url).text
             try:
-                data_list.append(pd.read_csv(io.StringIO(resource_dump_data), on_bad_lines='skip'))
+                data_list.append(pd.read_csv(io.StringIO(
+                    resource_dump_data), on_bad_lines='skip'))
             except pd.errors.ParserError as e:
                 print(f"Error parsing {resource['id']}: {e}")
 
@@ -36,5 +38,3 @@ def get_data(base_url, package_id):
     print(df.head())
 
     return df
-
-

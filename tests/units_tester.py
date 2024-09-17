@@ -6,7 +6,8 @@ import os
 import pandas as pd
 
 # Add the directory containing the modules to the Python path
-sys.path.append(os.path.join(os.path.dirname(__file__), 'path_to_modules_directory'))
+sys.path.append(os.path.join(os.path.dirname(
+    __file__), 'path_to_modules_directory'))
 
 # Load the functions data from the JSON file
 with open('functions_data.json', 'r') as f:
