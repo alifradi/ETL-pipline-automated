@@ -4,7 +4,7 @@
         "function_name": "get_data",
         "type": "extract",
         "arguments": ["https://ckan0.cf.opendata.inter.prod-toronto.ca", "tennis-courts-facilities"],
-        "table_name": "marriage_licence_statistics"
+        "table_name": "tennis-courts-facilities"
     },
      {
         "module_name": "extract",
