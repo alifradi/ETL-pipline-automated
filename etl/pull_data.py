@@ -1,6 +1,7 @@
 import json
 from extract import get_data
 
+
 def main():
     # Load the JSON file
     with open('functions_data.json') as f:
@@ -14,6 +15,7 @@ def main():
         # You can save the dataframe to a file or database here if needed
         df.to_csv(f"{item['table_name']}.csv", index=False)
         print(f"Data for {package_id} saved to {item['table_name']}.csv")
+
 
 if __name__ == "__main__":
     main()
