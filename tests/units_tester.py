@@ -3,6 +3,7 @@ import importlib
 import sys
 import os
 import pandas as pd
+import requests
 
 # Add the directory containing the modules to the Python path
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'etl'))
