@@ -21,7 +21,7 @@ with DAG(
 
     extract_task = DockerOperator(
         task_id='extract_task',
-        image='Dockerfile_extract',
+        image='afrady/extracter_image',
         api_version='auto',
         auto_remove=True,
         command='/bin/bash -c "python pull_data.py"',
@@ -32,7 +32,7 @@ with DAG(
 
     transform_and_load_task = DockerOperator(
         task_id='transform_and_load_task',
-        image='Dockerfile.transform_load',
+        image='afrady/transform_load_image',
         api_version='auto',
         auto_remove=True,
         command='/bin/bash -c "Rscript transform_load.R"',
