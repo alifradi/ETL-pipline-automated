@@ -1,0 +1,51 @@
+name: Run Airflow DAG
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    services:
+      docker:
+        image: docker:19.03.12
+        options: --privileged
+        ports:
+          - 8080:8080
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build and push extracter image
+        run: |
+          docker build -t your_dockerhub_username/extracter_image -f Dockerfile.extract .
+          docker push your_dockerhub_username/extracter_image
+
+      - name: Build and push transform_and_load image
+        run: |
+          docker build -t your_dockerhub_username/transform_load_image -f Dockerfile.transform_load .
+          docker push your_dockerhub_username/transform_load_image
+
+      - name: Start Airflow
+        run: |
+          docker-compose up -d
+
+      - name: Trigger Airflow DAG
+        run: |
+          curl -X POST "http://localhost:8080/api/v1/dags/docker_compose_dag/dagRuns" \
+          -H "Content-Type: application/json" \
+          -d '{"conf":{}}'
