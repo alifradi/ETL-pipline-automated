@@ -50,6 +50,9 @@ jobs:
         run: |
           docker-compose up -d
 
+      - name: Wait for Airflow to start
+        run: sleep 60
+
       - name: Trigger Airflow DAG
         run: |
           curl -X POST "http://localhost:8080/api/v1/dags/docker_compose_dag/dagRuns" \
