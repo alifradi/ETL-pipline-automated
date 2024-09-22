@@ -21,10 +21,10 @@ with DAG(
 
     extract_task = DockerOperator(
         task_id='extract_task',
-        image='Dockerfile.extract',  
+        image='Dockerfile.extract',
         api_version='auto',
         auto_remove=True,
-        command='/bin/bash -c "python pull_data.py"',  
+        command='/bin/bash -c "python pull_data.py"',
         docker_url='unix://var/run/docker.sock',
         network_mode='bridge',
         volumes=['/data:/data', '/output:/clean_data'],
@@ -32,10 +32,10 @@ with DAG(
 
     transform_and_load_task = DockerOperator(
         task_id='transform_and_load_task',
-        image='Dockerfile.transform_load',  
+        image='Dockerfile.transform_load',
         api_version='auto',
         auto_remove=True,
-        command='/bin/bash -c "Rscript transform_load.R"',  
+        command='/bin/bash -c "Rscript transform_load.R"',
         docker_url='unix://var/run/docker.sock',
         network_mode='bridge',
         volumes=['/data:/data', '/output:/clean_data'],
