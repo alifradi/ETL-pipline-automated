@@ -14,7 +14,7 @@ with DAG(
     'docker_compose_dag',
     default_args=default_args,
     description='A simple Docker Compose DAG',
-    schedule_interval='@monthly',
+    schedule_interval='@daily',
     start_date=days_ago(21),
     catchup=False,
 ) as dag:
