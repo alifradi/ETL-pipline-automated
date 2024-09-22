@@ -1,0 +1,29 @@
+# Use the official R image
+FROM r-base:4.3.2
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the contents of the 'etl' directory into the container at /app
+COPY etl/ /app/
+
+RUN mkdir -p /clean_data && chmod -R 777 /clean_data
+
+RUN apt-get update && apt-get install -y \
+    libcurl4-openssl-dev \
+    libssl-dev \
+    libxml2-dev \
+    libgit2-dev
+
+# Install necessary R packages
+RUN R -e "install.packages(c('dplyr', 'jsonlite','purr','lubridate','tidyr','stringr','readr'), repos='http://cran.rstudio.com/')"
+
+
+# Verify installation
+RUN R -e "installed.packages()"
+
+# Make port 80 available to the world outside this container
+EXPOSE 80
+
+# Run transforming_data.R when the container launches
+CMD ["Rscript", "transform_load.R"]
