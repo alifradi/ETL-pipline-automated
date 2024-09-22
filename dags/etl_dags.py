@@ -21,7 +21,7 @@ with DAG(
 
     extract_task = DockerOperator(
         task_id='extract_task',
-        image='Dockerfile.extract',
+        image='Dockerfile_extract',
         api_version='auto',
         auto_remove=True,
         command='/bin/bash -c "python pull_data.py"',
